@@ -7,7 +7,16 @@
 				{{ post.published_date }}
 			</div>
 		{% endif %}
-		<h1>{{ post.title }}</h1>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-10">
+					<h1>{{ post.title }}</h1>
+				</div>
+				<div class="col-md-2">
+					<a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-default" title="Editar"><i class="fas fa-edit"></i></a>
+				</div>
+			</div>
+		</div>
 		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
 {% endblock %}
